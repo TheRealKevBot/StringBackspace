@@ -4,8 +4,12 @@
 // Your task is to process a string with "#" symbols.
 
 function cleanString(s) {
-	// your code...
+    let string = []
+    s.split('').forEach(char => {
+        char === '#' ? string.pop() : string.push(char)
+    })
+    return string.join('')
 }; 
 
-console.log(cleanString('abc#d##c'), "Answer: 'ac'")
-console.log(cleanString('abc####d##c#'), "Answer: ''" )
+console.log(cleanString('abc#d##c'), "Answer: ac")
+console.log(cleanString('abc####d##c#'), "Answer: " )
